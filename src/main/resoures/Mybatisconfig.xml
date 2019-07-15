@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置环境-->
+    <environments default="sql">
+        <environment id="sql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <!--配置数据库连接的基本信息-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://120.79.46.234:3306/test?serverTimezone=GMT%2B8"/>
+                <property name="username" value="lisql"/>
+                <property name="password" value="lhq123"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--配置映射文件-->
+    <mappers>
+        <!--以资源路径进行配置-->
+        <!--<mapper resource=""/>-->
+        <!--以类路径进行配置-->
+        <!--<mapper class=""/>-->
+        <!--以url的方式进行配置-->
+        <!--<mapper url=""/>-->
+        <!--以包的形式进行配置-->
+        <package name="com.ssm.dao"/>
+    </mappers>
+</configuration>
